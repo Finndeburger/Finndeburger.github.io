@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Finnstagram</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/130ae9be0d.js" crossorigin="anonymous"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="IMG/Favicon/Paper/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="IMG/Favicon/Paper/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="IMG/Favicon/Paper/favicon-16x16.png">
+<link rel="manifest" href="IMG/Favicon/Paper/site.webmanifest">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+a {text-decoration: none;}
+</style>
+</head>
+<body class="w3-theme-l5"> 
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="HOME_Index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="https://bit.ly/3bim457" class="w3-bar-item w3-button">1 new friend request</a>
+      <a href="https://youtu.be/M2cckDmNLMI?t=127" class="w3-bar-item w3-button">Finn posted Event</a>
+      <a href="https://youtu.be/eUE81LJZ0AQ?t=98" class="w3-bar-item w3-button">Nobody likes your posts</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <img src="IMG/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+  </a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">My Profile</h4>
+         <p class="w3-center"><img src="IMG/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Cute furry</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Finneon City, USF</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> September 11th 2001</p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Touch Grass Nerd.</p>
+          </div>
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
+          <div id="Demo2" class="w3-hide w3-container">
+            <p>Mom's Birthday</p>
+          </div>
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+          <div id="Demo3" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+           <div class="w3-half">
+             <img src="IMG/sussy1.png" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="IMG/Sussy2.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="IMG/Sussy3.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="IMG/Sussy4.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="IMG/Sussy5.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+           <div class="w3-half">
+             <img src="IMG/Sussy6.jpg" style="width:100%" class="w3-margin-bottom">
+           </div>
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      
+      <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-15">UNF Archive</span>
+            <span class="w3-tag w3-small w3-theme-d5">Feet</span>
+            <span class="w3-tag w3-small w3-theme-d4">Loli Hentai</span>
+            <span class="w3-tag w3-small w3-theme-d3">KORTZ</span>
+            <span class="w3-tag w3-small w3-theme-d2">MYC</span>
+            <span class="w3-tag w3-small w3-theme-d1">Rep. of Cum</span>
+            <span class="w3-tag w3-small w3-theme">Games</span>
+            <span class="w3-tag w3-small w3-theme-l1">Genshin Impact</span>
+            <span class="w3-tag w3-small w3-theme-l2">MyTube</span>
+            <span class="w3-tag w3-small w3-theme-l3">Government</span>
+            <span class="w3-tag w3-small w3-theme-l4">Plans</span>
+          </p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>Welcome to Finnstagram</p>
+      </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">Post on the Social Wall!</h6>
+              <p contenteditable="true" class="w3-border w3-padding">Status: Mentally Insane</p>
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Wall Posts -->
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar7.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">6-2-2023</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>KORTZ-Politics</h4><br>
+        <hr class="w3-clear">
+        <p>Welcome RedLight City!</p>
+        <img src="IMG/RLCSkyline.png" style="width:100%" class="w3-margin-bottom">
+        <p>We can now say that the city of RedLight City has been intergrated in the map.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">20-1-2023</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>Finn Harmens</h4><br>
+        <hr class="w3-clear">
+        <p>At the opening of the KORTZ-Building today 🙂</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">2-1-2023</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>PlanCenterMYC</h4><br>
+        <hr class="w3-clear">
+        <p>First Contact with the main land.</p>
+        <img src="IMG/Uma.png" style="width:100%" class="w3-margin-bottom">
+        <p>We started building the Uma Bridge that connects Finneon City and the rest of the USF.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">28-12-2022</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>PlanCenterMYC</h4><br>
+        <hr class="w3-clear">
+        <p>We decided that the KORTZ-Building is opening on januari 20th 2023.</p>
+          <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+              <img src="IMG/KORTZ.png" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+              <img src="IMG/KORTZ2.png" style="width:100%" alt="Nature" class="w3-margin-bottom">
+          </div>
+        </div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">27-12-2022</span>
+        <h4>Martha Thatcher</h4><br>
+        <hr class="w3-clear">
+        <p>Hellooooo!</p>
+        <img src="IMG/Boat.png" style="width:100%" class="w3-margin-bottom">
+        <p>Just arrived in the beautiful Finneon City!</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">27-12-2022</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>Finn Harmens</h4><br>
+        <hr class="w3-clear">
+        <p>I created an official government site for the UNF. I decided to make a social media site aswell :) (Finnstagram!)</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>  
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar3.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">18-12-2022</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Verified Account</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>WhiteOnesPodcast </h4><br>
+        <hr class="w3-clear">
+        <p>Belle Delphine about Finneon City, Mine York City and More!</p>
+        <img src="IMG/Girl.jpg" style="width:100%" class="w3-margin-bottom">
+        <p>Famous E-Girl Belle Delphine, who made her fortune by selling her bathwater, talked about her opinion of the upcomming cities like Finneon City, Mine York City, Los Angeles, Las Finngas, San Finnsisco and more in the latest episode of White Ones. Her only complaint is the waiting time for it to be finished.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">15-12-2022</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>PlanCenterMYC </h4><br>
+        <hr class="w3-clear">
+        <p>Updated Map.</p>
+        <img src="IMG/Finnland Borders.jpg" style="width:100%" class="w3-margin-bottom">
+        <p>We welcome leaders Danelius "Daniël" Pietersyan, Emperor "Emil" Emilitron and King Cum "Camille" Overend to the continent as they will be taking the places of ruler over the unnamed land that is surrounding the USF. We can now confirm the creation of 3 new countries in the now founded United Nations of Finnland (UNF). The new countries are Armenia of Armenistan, Emilitronia and Cum Islands.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="IMG/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">22-9-2022</span>
+        <span class="w3-center w3-tag w3-small w3-theme-15">Official Archive Post</span>
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>PlanCenterMYC </h4><br>
+        <hr class="w3-clear">
+        <p>Begin Construction Finneon City.</p>
+        <img src="IMG/FinneonCity.png" style="width:100%" class="w3-margin-bottom">
+        <p>Every big project has to start somewhere.</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <!-- !Event!
+          <p><strong>Nothing.</strong></p>
+          -->
+          <img src="IMG/mom.jpg" alt="Mom" style="width:100%;">
+          <p><strong>Mom's Birthday</strong></p>
+          <p>March 24th</p>
+          <p><a class="w3-button w3-block w3-theme-l4" href="#">Info</a></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Friend Request</p>
+          <img src="IMG/avatar2.png" alt="Avatar" style="width:50%"><br>
+          <span>Finn Harmens</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <img src="IMG/ADS.jpg" style="width: 75%; height: 75%;">
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+        <p><i class="fa fa-bug w3-xxlarge"></i></p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Finnstagram</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.youtube.com/watch?v=7eVlsmhNZjg" target="_blank">Mr. Beast</a></p>
+</footer>
+ 
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html> 
