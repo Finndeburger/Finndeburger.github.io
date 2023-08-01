@@ -64,6 +64,12 @@
       {
         "label": "off"
       }
+    ],
+    "axe/time-and-media": [
+      "default",
+      {
+        "meta-refresh": "off"
+      }
     ]
   }
 }
